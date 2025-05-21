@@ -1,0 +1,38 @@
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+
+interface contentInterface{
+    heading:string,
+    paragraph:string,
+    text?:string,
+    boxShadow:string,
+    width?:number,
+    bgColor?:string,
+    headingSize:string,
+    paragraphSize:string
+};
+const Content=({heading,paragraph,text,boxShadow,width,bgColor,paragraphSize,headingSize}:contentInterface)=>{
+return(
+
+    <Card className='card' sx={{ width:width,boxShadow:boxShadow ,textAlign:"center",display:"flex",flexDirection:"column",alignItems:"center",backgroundColor:bgColor}}>
+      <CardContent>
+              <Typography className='heading' variant="h5" component="div" sx={{fontSize:headingSize}}>
+          {heading}
+        </Typography>
+         <Typography className='paragraph' variant="body2" sx={{wordBreak:"break-word",marginTop:"4px",fontSize:paragraphSize}}>
+            {paragraph}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        {
+          !text ? "":  <Button size="small" variant='contained'>{text}</Button>
+        }
+      
+      </CardActions>
+    </Card>
+)
+};
+export default Content;
