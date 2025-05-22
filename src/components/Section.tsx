@@ -2,16 +2,17 @@ import type {ReactElement } from "react"
 import Overlay from "./Overlay"
 
 interface sectionContent{
-    center?:ReactElement,
+    content?:ReactElement,
     height?:string,
-    bg?:string
+    bg?:string,
+    overlay?:boolean,
 };
-const Section = ({center,height,bg}:sectionContent) => {
+const Section = ({content,height,bg,overlay}:sectionContent) => {
   return (
     <div className="hero_banner" style={{height:height,background:bg}}>
-      <Overlay />
+      {overlay?<Overlay/>:null}
         {
-            center
+            content
         }
     </div>
   )

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rouge+Script&display=swap');
 *{
   box-sizing: border-box;
   margin: 0;
@@ -31,12 +32,13 @@ header nav a{
   color: #fff !important;
 }
 .hero_banner{
-  background: url(assets/images/bannerPhoto.jpg);
+  background: url(images/bannerPhoto.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: flex;
   align-items: center;
+  width: 100% !important;
   justify-content: center;
   position: relative;
 }
@@ -44,7 +46,32 @@ header nav a{
   z-index: 9999;
   background-color: transparent !important;
   color: #fff;
+  text-align: center;
+}
+.hero_banner .card .heading{
+   font-family: "Rouge Script", cursive !important;
+  font-weight:400;
+}
+.hero_banner .cardImage{
+  width: 400px;
+height: 240px;
+object-fit: cover;
+}
+.card{
+  text-align:"center";
+  margin: auto;
 }
 .card .heading{
   font-weight: 600;
+}
+@media screen and (max-width:1040px){
+  .hero_banner .cardImage{
+    width: 350px;
+  }
+}
+@media screen and (max-width:900px){
+  .hero_banner .superman .cardImage{
+    display: flex !important;
+    flex-direction: row !important;
+  }
 }

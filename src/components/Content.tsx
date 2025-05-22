@@ -3,21 +3,23 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+// import '../index.css';
 
 interface contentInterface{
     heading:string,
     paragraph:string,
     text?:string,
-    boxShadow:string,
-    width?:number,
+    boxShadow?:string,
+    width?:string,
+    height?:string,
     bgColor?:string,
-    headingSize:string,
-    paragraphSize:string
+    headingSize?:string,
+    paragraphSize?:string
 };
-const Content=({heading,paragraph,text,boxShadow,width,bgColor,paragraphSize,headingSize}:contentInterface)=>{
+const Content=({heading,paragraph,text,boxShadow,width,height,bgColor,paragraphSize,headingSize}:contentInterface)=>{
 return(
 
-    <Card className='card' sx={{ width:width,boxShadow:boxShadow ,textAlign:"center",display:"flex",flexDirection:"column",alignItems:"center",backgroundColor:bgColor}}>
+    <Card className='card' sx={{ width:width,height:height,boxShadow:boxShadow ,backgroundColor:bgColor}}>
       <CardContent>
               <Typography className='heading' variant="h5" component="div" sx={{fontSize:headingSize}}>
           {heading}
