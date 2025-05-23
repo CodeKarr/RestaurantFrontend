@@ -15,7 +15,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* z-index: ; */
+}
+.card{
+  background: none !important;
 }
 header{
   width: 100%;
@@ -52,10 +54,13 @@ header nav a{
    font-family: "Rouge Script", cursive !important;
   font-weight:400;
 }
+.hero_banner .card .paragraph{
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
 .hero_banner .cardImage{
   width: 400px;
 height: 240px;
-object-fit: cover;
 }
 .card{
   text-align:"center";
@@ -64,14 +69,219 @@ object-fit: cover;
 .card .heading{
   font-weight: 600;
 }
+.superman{
+  width: 100%;
+  background: transparent;
+  padding-bottom: 2em;
+}
+.superman .hero_banner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background: transparent;
+}
+.superman .hero_banner .cardImage{
+  width: 100%;
+  position: relative;
+}
+.cardImage .Image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reservation{
+  height: 80vh;
+  background: url('images/reservation.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reservation .card{
+  z-index: 9999;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  color: #fff;
+  text-align: center;
+}
+.reservation .card .heading{
+  font-size: 6em;
+  font-family: "Rouge Script", cursive !important;
+  letter-spacing: 0.1em;
+}
+.reservation .card .paragraph{
+  font-size: 1em;
+  letter-spacing: 0.3em;
+}
+.tasty_menu{
+  padding: 2em 0em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3em;
+}
+.tasty_menu .tasty_menu_heading .card{
+  text-align: center;
+}
+.tasty_menu .tasty_menu_heading .card .heading{
+  font-family: "Rouge Script", cursive;
+  font-size: 3em;
+  letter-spacing: 4px;
+  text-align: center;
+}
+.tasty_menu .menu{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.tasty_menu .menu li{
+  padding: 12px 13px;
+  box-shadow: 0 1px 0 rgba(59, 59, 59, 0.342);
+  position: relative;
+}
+.tasty_menu .menu li:hover{
+  box-shadow: 0 2px 0 #000000d2;
+  cursor: pointer;
+}
+.tasty_menu .griding .card{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: none;
+  margin: 0.6em 0;
+  border-bottom: 1px dashed rgba(46, 45, 45, 0.466);
+}
+.tasty_menu .griding .card .heading{
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.tasty_menu .griding{
+  width: 100%;
+}
+.reviews{
+  width: 100%;
+  height: 80vh;
+  background: url('images/bannerPhoto.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviews .reviews_slider{
+  position: absolute;
+  background: red;
+  width: 80%;
+  height: 70%;
+  color: #fff;
+}
+.todays_special {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.todays_special .todays_special_cards{
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s ease-in;
+  height:390px;
+  box-shadow: 0 0 12px rgb(151, 98, 33);
+}
+.todays_special .todays_special_cards .card{
+  height: 100%;
+  width: 100%;
+  background-color: rgb(192, 125, 44) !important;
+  color: #fff;
+}
+.todays_special .todays_special_cards .card .heading{
+  letter-spacing: 1px;
+  font-size: 1.1em;
+  color: rgb(241, 211, 174);
+}
+.todays_special .todays_special_cards:hover{
+  transform: scale(1.1);
+  z-index: 9999;
+}
+.todays_special .todays_special_cards img{
+  width: 100%;
+}
 @media screen and (max-width:1040px){
   .hero_banner .cardImage{
     width: 350px;
   }
+  .reservation .card .heading{
+    font-size: 4.3em;
+  }
 }
 @media screen and (max-width:900px){
-  .hero_banner .superman .cardImage{
+  .superman .hero_banner{
     display: flex !important;
     flex-direction: row !important;
+    justify-content: space-around;
+  }
+  .hero_banner .card .heading{
+    font-size: 3.5em;
+    letter-spacing: 7px;
+  }
+  .hero_banner .card .paragraph{
+    font-size: 1em;
+    letter-spacing: 4px;
+  }
+}
+@media screen and (max-width:600px) {
+  header nav a{
+    font-size: 0.8em;
+  }
+  header h3{
+    font-size: 0.9em;
+  }
+  .hero_banner{
+    height: 70vh !important;
+  }
+  .reservation{
+    height: 50vh;
+  }
+  .hero_banner .card .heading{
+    font-size: 2.3em;
+    letter-spacing: 4px;
+  }
+  .hero_banner .card .paragraph{
+    font-size: 0.7em;
+  }
+  .reservation .card .heading{
+    font-size: 3em;
+  }
+  .reservation .card .paragraph{
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width:400px) {
+    .hero_banner .card .heading{
+    font-size: 1.8em;
+    letter-spacing: 4px;
+  }
+  .hero_banner .card .paragraph{
+    font-size: 0.7em;
+  }
+  .reservation .card .heading{
+    font-size: 2.3em;
+  }
+  .reservation .card .paragraph{
+    font-size: 0.7em;
   }
 }

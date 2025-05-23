@@ -14,12 +14,13 @@ interface contentInterface{
     height?:string,
     bgColor?:string,
     headingSize?:string,
-    paragraphSize?:string
+    paragraphSize?:string,
+    extraInfo?:string
 };
-const Content=({heading,paragraph,text,boxShadow,width,height,bgColor,paragraphSize,headingSize}:contentInterface)=>{
+const Content=({heading,paragraph,text,boxShadow,width,height,bgColor,paragraphSize,headingSize,extraInfo}:contentInterface)=>{
 return(
 
-    <Card className='card' sx={{ width:width,height:height,boxShadow:boxShadow ,backgroundColor:bgColor}}>
+    <Card className='card' sx={{ width:width,height:height,boxShadow:boxShadow}}>
       <CardContent>
               <Typography className='heading' variant="h5" component="div" sx={{fontSize:headingSize}}>
           {heading}
@@ -32,7 +33,9 @@ return(
         {
           !text ? "":  <Button size="small" variant='contained'>{text}</Button>
         }
-      
+      {
+        extraInfo
+      }
       </CardActions>
     </Card>
 )
